@@ -1,0 +1,122 @@
+
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #e72c2cd9;
+  color: white;
+  height: 200px;
+  
+  background-size: 20% 20%;
+}
+#orders {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+  
+}
+
+#orders td, #orders th {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+#orders tr{background-color: white;}
+
+#orders tr:hover {background-color: white;}
+
+#orders th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: grey;
+  color: white;
+}
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  
+}
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: red;
+  color: red;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: white;
+  color: red;
+ 
+}
+.navbar a.active:hover {
+  background-color: red;
+  color: black;
+}
+.navbar a.contact {
+  background-color: white;
+  color: red;
+  
+}
+.navbar a.contact:hover {
+  background-color: red;
+  color: black;
+}
+
+
+.navbar {
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 2px 4px grey;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  height:50px
+}
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  overflow: auto;
+  height: 500px;
+  
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: white;
+  color: black;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  color: white;
+  background: #e72c2cd9;
+  width: 100%
+  
+  
+}
+
