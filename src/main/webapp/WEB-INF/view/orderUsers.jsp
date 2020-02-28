@@ -85,7 +85,7 @@
                                 </td>
                                 <td>
                                     
-                                    <!--form id ="update" action="/${order.orderid}/updateOrder" method="get"-->
+                                    <form id ="update" action="/${order.orderid}/updateOrder" method="get">
                                     <button onclick="updateStatus('/order/${order.orderid}')">ProcessOrder</button>
                                      
                                     </form>
