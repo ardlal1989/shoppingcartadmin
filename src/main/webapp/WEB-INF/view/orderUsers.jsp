@@ -85,7 +85,7 @@
                                 </td>
                                 <td>
                                     
-                                    <form id ="update" action="/order/${order.orderid}" method="get">
+                                    <form id ="update" action="/ShoppingCartAdminPage-0.0.1-SNAPSHOT/order/${order.orderid}" method="get">
                                     <button onclick="updateStatus('/order/${order.orderid}')">ProcessOrder</button>
                                      
                                     </form>
