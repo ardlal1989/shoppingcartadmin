@@ -86,9 +86,9 @@
                                 <td>
                                     
                                     <!--form id ="update" action="/order/${order.orderid}" method="get"-->
-                                    <button onclick="updateStatus('/ShoppingCartAdminPage-0.0.1-SNAPSHOT/order/${order.orderid}')">ProcessOrder</button>
+                                    <button onclick="updateStatus('/order/${order.orderid}')">ProcessOrder</button>
                                      
-                                    </form>
+                                    <!--/form-->
                                 </td>
                             </tr>
                         </c:forEach>
