@@ -29,6 +29,7 @@ public class MainController {
 	@GetMapping("/order/{orderid}")
     public String updateOrderStatus(@PathVariable int orderid, Model model) {
         Optional<OrderUser> ord=repoUser.findById(orderid);
+	    System.out.println("In the method update");
         OrderUser ordNew=new OrderUser();
         java.util.Date date=new java.util.Date();
         ordNew.setOrderid(orderid);
