@@ -22,6 +22,7 @@ public class MainController {
 	@GetMapping("/getAllOrders")
     public String showAllOrderUsers(Model model) {
         model.addAttribute("orderUsers", repoUser.findNotAccepted(false));
+	    System.out.println("Hello All");
         return "orderUsers";
     }
 	     
