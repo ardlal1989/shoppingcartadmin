@@ -37,6 +37,17 @@ public class OrderUser {
     @Column(name = "orderdelivereddatetime", nullable = true)
     private Date orderdelivereddatetime;
 	
+	@Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "orderreceiveddatetime", nullable = true)
+    private Date orderreceiveddatetime;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "orderaccepteddatetime", nullable = true)
+    private Date orderaccepteddatetime;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "orderoutfordeliverydatetime", nullable = true)
+    private Date orderoutfordeliverydatetime;
 
 	public int getOrderid() {
 		return orderid;
@@ -116,6 +127,30 @@ public class OrderUser {
 
 	public void setOrderdelivereddatetime(Date orderdelivereddatetime) {
 		this.orderdelivereddatetime = orderdelivereddatetime;
+	}
+	
+	public Date getOrderreceiveddatetime() {
+		return orderreceiveddatetime;
+	}
+
+	public void setOrderreceiveddatetime(Date orderreceiveddatetime) {
+		this.orderreceiveddatetime = orderreceiveddatetime;
+	}
+
+	public Date getOrderaccepteddatetime() {
+		return orderaccepteddatetime;
+	}
+
+	public void setOrderaccepteddatetime(Date orderaccepteddatetime) {
+		this.orderaccepteddatetime = orderaccepteddatetime;
+	}
+
+	public Date getOrderoutfordeliverydatetime() {
+		return orderoutfordeliverydatetime;
+	}
+
+	public void setOrderoutfordeliverydatetime(Date orderoutfordeliverydatetime) {
+		this.orderoutfordeliverydatetime = orderoutfordeliverydatetime;
 	}
 
 	@Override
