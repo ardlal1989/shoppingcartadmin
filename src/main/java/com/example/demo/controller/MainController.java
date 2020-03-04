@@ -22,7 +22,6 @@ public class MainController {
 	@GetMapping("/getAllOrders")
     public String showAllOrderUsers(Model model) {
         model.addAttribute("orderUsers", repoUser.findNotAccepted(false));
-	    System.out.println("Hello All");
         return "orderUsers";
     }
 	     
@@ -30,7 +29,6 @@ public class MainController {
 	@GetMapping("/order/{orderid}")
     public String updateOrderStatus(@PathVariable int orderid, Model model) {
         Optional<OrderUser> ord=repoUser.findById(orderid);
-	    System.out.println("In the method update");
         OrderUser ordNew=new OrderUser();
         java.util.Date date=new java.util.Date();
         ordNew.setOrderid(orderid);
@@ -41,11 +39,14 @@ public class MainController {
         {
         	      	
         	
-        	ordNew.setOrder_received(true);
+        	ordNew.setOrder_received(true);       	
         	ordNew.setOrder_accepted(ord.get().isOrder_accepted());
         	ordNew.setOrder_outfordelivery(ord.get().isOrder_outfordelivery());
         	ordNew.setOrderdatetime(ord.get().getOrderdatetime());
         	ordNew.setOrder_delivered(ord.get().isOrder_delivered());
+        	ordNew.setOrderreceiveddatetime(date);
+        	ordNew.setOrderaccepteddatetime(ord.get().getOrderaccepteddatetime());
+        	ordNew.setOrderoutfordeliverydatetime(ord.get().getOrderoutfordeliverydatetime());
         	ordNew.setOrderdelivereddatetime(ord.get().getOrderdelivereddatetime());
         	
         }
@@ -58,6 +59,9 @@ public class MainController {
         	ordNew.setOrder_outfordelivery(ord.get().isOrder_outfordelivery());
         	ordNew.setOrderdatetime(ord.get().getOrderdatetime());
         	ordNew.setOrder_delivered(ord.get().isOrder_delivered());
+        	ordNew.setOrderreceiveddatetime(ord.get().getOrderreceiveddatetime());
+        	ordNew.setOrderaccepteddatetime(date);
+        	ordNew.setOrderoutfordeliverydatetime(ord.get().getOrderoutfordeliverydatetime());
         	ordNew.setOrderdelivereddatetime(ord.get().getOrderdelivereddatetime());
         	
         }
@@ -70,6 +74,9 @@ public class MainController {
         	ordNew.setOrder_outfordelivery(true);
         	ordNew.setOrderdatetime(ord.get().getOrderdatetime());
         	ordNew.setOrder_delivered(ord.get().isOrder_delivered());
+        	ordNew.setOrderreceiveddatetime(ord.get().getOrderreceiveddatetime());
+        	ordNew.setOrderaccepteddatetime(ord.get().getOrderaccepteddatetime());
+        	ordNew.setOrderoutfordeliverydatetime(date);
         	ordNew.setOrderdelivereddatetime(ord.get().getOrderdelivereddatetime());
         	
         }
@@ -83,6 +90,9 @@ public class MainController {
         	ordNew.setOrder_outfordelivery(ord.get().isOrder_outfordelivery());
         	ordNew.setOrderdatetime(ord.get().getOrderdatetime());
         	ordNew.setOrder_delivered(true);
+        	ordNew.setOrderreceiveddatetime(ord.get().getOrderreceiveddatetime());
+        	ordNew.setOrderaccepteddatetime(ord.get().getOrderaccepteddatetime());
+        	ordNew.setOrderoutfordeliverydatetime(ord.get().getOrderoutfordeliverydatetime());
         	ordNew.setOrderdelivereddatetime(date);
         	
         } 
